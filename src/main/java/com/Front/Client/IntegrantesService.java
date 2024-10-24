@@ -22,7 +22,7 @@ public class IntegrantesService {
     
  // Método para obtener la lista de integrantes desde el backend
     public List<String> getIntegrantes() {
-        String[] integrantes = restTemplate.getForObject("http://localhost:8080/get-integrantes", String[].class);
+        String[] integrantes = restTemplate.getForObject("https://backendciber.azurewebsites.net/get-integrantes", String[].class);
         return Arrays.asList(integrantes);
     }
 }
