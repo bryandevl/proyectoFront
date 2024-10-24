@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de Integrantes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: #f9f9f9;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 3px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        li:hover {
+            background-color: #e9e9e9;
+        }
+             .btn-regresar {
+            display: block; /* Centra el botón */
+            width: 100%; /* Ancho completo del botón */
+            padding: 10px; /* Espaciado interno */
+            margin-top: 20px; /* Espaciado superior */
+            background-color: #007bff; /* Color de fondo azul */
+            color: white; /* Color del texto */
+            border: none; /* Sin borde */
+            border-radius: 6px; /* Bordes redondeados */
+            font-size: 16px; /* Tamaño de fuente */
+            cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+            text-align: center; /* Centra el texto */
+            text-decoration: none; /* Elimina subrayado */
+            transition: background-color 0.3s; /* Transición suave para el fondo */
+        }
+        .btn-regresar:hover {
+            background-color: #0056b3; /* Color más oscuro al hacer hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Detalle de Integrantes</h1>
+        <ul>
+            <li th:each="integrante : ${integrantes}" th:text="${integrante}"></li>
+                 <!-- Botón de regresar -->
+            <a href="http://localhost:8081" class="btn-regresar">Regresar</a> <!-- Cambia "tu-url-aqui" por la ruta deseada -->
+      
+        </ul>
+    </div>
+</body>
+</html>
